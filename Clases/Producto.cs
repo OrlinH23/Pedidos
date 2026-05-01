@@ -7,12 +7,25 @@ public class Producto
 
     public void MostrarInformacion()
     {
-        
+
         Console.WriteLine($"ID: {Id}");
         Console.WriteLine($"Nombre: {Nombre}");
         Console.WriteLine($"Precio: {Precio}");
         Console.WriteLine($"Cantidad Disponible: {Stock}");
         Console.WriteLine();
+
+    }
+
+    public void DisminuirStock(int cantidad)
+    {
+        if (Stock >= cantidad)
+        {
+            Stock -= cantidad;
+        }
+         else
+        {
+            Console.WriteLine($"No hay suficiente stock disponible para {Nombre}.");
+        }
 
     }
 }//termina la clase producto

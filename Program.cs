@@ -20,6 +20,7 @@ producto2.Stock= 30;
 
 producto2.MostrarInformacion();
 
-
-
-
+Pedido pedido = new Pedido(1);
+pedido.AgregarItem(producto, 51);
+pedido.AgregarItem(producto2, 10);
+pedido.MostrarDetalles();
