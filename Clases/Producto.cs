@@ -5,15 +5,13 @@ public class Producto
     public decimal Precio { get; set; }
     public int Stock { get; set; }
 
-    public void MostrarInformacion()
+    public virtual void MostrarInformacion()
     {
-
+        Console.WriteLine("*******Datos del Producto*******");
         Console.WriteLine($"ID: {Id}");
         Console.WriteLine($"Nombre: {Nombre}");
         Console.WriteLine($"Precio: {Precio}");
         Console.WriteLine($"Cantidad Disponible: {Stock}");
-        Console.WriteLine();
-
     }
 
     public void DisminuirStock(int cantidad)
